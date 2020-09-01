@@ -26,18 +26,11 @@
         >
           <ActionButton
             v-if="!isPlaying || song.src !== current.src"
-            id="play-button"
             :onClick="play.bind(null, song, i)"
             :svg="mdiPlay"
             :size="24"
           />
-          <ActionButton
-            v-else
-            id="pause-button"
-            :onClick="pause"
-            :svg="mdiPause"
-            :size="24"
-          />
+          <ActionButton v-else :onClick="pause" :svg="mdiPause" :size="24" />
           <span class="ml-3"> {{ song.title }} - {{ song.artist }} </span>
         </div>
       </div>
@@ -88,8 +81,6 @@
 <script>
 import ActionButton from "./components/ActionButton";
 import { mdiPlay, mdiSkipPrevious, mdiSkipNext, mdiPause } from "@mdi/js";
-import "./assets/css/tailwind.css";
-import "./assets/css/main.css";
 
 export default {
   name: "App",
