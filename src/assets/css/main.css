@@ -1,0 +1,7 @@
+html {
+  overflow-y: auto;
+}
+
+#app .theme--light.v-icon {
+  @apply text-gray-200;
+}
